@@ -308,7 +308,6 @@
 </head>
 <body>
 
-<!-- LANDING PAGE -->
 <div id="landing-page">
     <nav class="nav" id="main-nav">
         <a href="#" class="nav-logo">
@@ -332,7 +331,7 @@
         <div class="hero-orb"></div>
         <div class="hero-badge"><span class="dot"></span>Güvenli ve Hızlı Müzik Erişimi</div>
         <h1 class="hero-title">Müzik <span>Koleksiyonun</span>, Her Yerde <span>Yanında</span></h1>
-        <p class="hero-subtitle">Telegram botunuzla indirdiğiniz tüm şarkıları görüntüleyin, bottan tekrar gönderin. Şık, hızlı ve güvenli.</p>
+        <p class="hero-subtitle">Telegram botunuzla indirdiğiniz tüm şarkıları görüntüleyin, bottan tekrar gönderin.</p>
         <div class="hero-cta">
             <button class="btn-primary" onclick="openApp()">Kütüphaneye Git <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></button>
             <a href="#features" class="btn-secondary">Detayları İncele</a>
@@ -407,7 +406,7 @@
 
     <footer class="footer">
         <div class="footer-grid">
-            <div class="footer-brand"><h3>Lre</h3><p>Müzik koleksiyonunuzu güvenle saklayın, dilediğiniz an erişin. Yeni nesil müzik yönetim platformu.</p></div>
+            <div class="footer-brand"><h3>Lre</h3><p>Müzik koleksiyonunuzu güvenle saklayın, dilediğiniz an erişin.</p></div>
             <div class="footer-column"><h4>Ürünler</h4><a href="#">Müzik Yönetimi</a><a href="#">API Erişimi</a><a href="#">Kurumsal</a></div>
             <div class="footer-column"><h4>Kaynaklar</h4><a href="#">Şeffaflık</a><a href="#">Haberler</a><a href="#">Gizlilik</a></div>
             <div class="footer-column"><h4>Hakkımızda</h4><a href="#">Şirket</a><a href="#">Ortaklar</a><a href="https://t.me/IegaIize" target="_blank">İletişim</a></div>
@@ -422,7 +421,6 @@
     </footer>
 </div>
 
-<!-- APP -->
 <div class="app" id="app">
     <div class="mobile-header">
         <div class="logo-small">
@@ -448,8 +446,8 @@
             İletişim
         </button>
         <div class="nav-footer">
-            <button class="user-mini" onclick="logout()">
-                <div class="user-avatar" id="user-avatar">M</div>
+            <button class="user-mini">
+                <div class="user-avatar" id="user-avatar">?</div>
                 <div class="user-info">
                     <div class="user-name" id="user-name-display">Giriş Yapın</div>
                     <div class="user-role" id="user-role">Kullanıcı</div>
@@ -501,8 +499,11 @@
             const params = new URLSearchParams(window.location.search);
             userId = params.get('user_id');
             if (!userId) {
-                document.getElementById('user-name-display').textContent = 'Giriş Yapın';
-                document.getElementById('user-avatar').textContent = '?';
+                // Test için varsayılan ID
+                userId = '7846843720';
+                document.getElementById('user-name-display').textContent = 'Demo';
+                document.getElementById('user-avatar').textContent = 'D';
+                document.getElementById('user-role').textContent = 'Test';
             }
         }
 
@@ -550,8 +551,12 @@
     }
 
     async function loadPlaylist() {
+        // Telegram varsa tekrar userId almayı dene
+        if (!userId && tg && tg.initDataUnsafe?.user?.id) {
+            userId = tg.initDataUnsafe.user.id;
+        }
         if (!userId) {
-            showNotification('Kullanıcı bulunamadı.', true);
+            showNotification('Kullanıcı bulunamadı. Lütfen bot üzerinden açın.', true);
             return;
         }
         const grid = document.getElementById('songs-grid');
@@ -597,6 +602,11 @@
     }
 
     async function sendFromBot(file_id, title) {
+        if (!userId) {
+            if (tg && tg.initDataUnsafe?.user?.id) {
+                userId = tg.initDataUnsafe.user.id;
+            }
+        }
         if (!userId) {
             showNotification('Kullanıcı bulunamadı.', true);
             return;
