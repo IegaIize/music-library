@@ -131,16 +131,10 @@
 
         .mobile-header {
             display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            height: 64px;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(20px);
-            z-index: 100;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            border-bottom: 1px solid var(--border);
+            position: fixed; top: 0; left: 0; right: 0; height: 64px;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
+            z-index: 100; align-items: center; justify-content: space-between;
+            padding: 0 20px; border-bottom: 1px solid var(--border);
         }
         .mobile-header .logo-small { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.1rem; }
         .mobile-header .logo-small svg { width: 36px; height: 36px; }
@@ -499,7 +493,6 @@
             const params = new URLSearchParams(window.location.search);
             userId = params.get('user_id');
             if (!userId) {
-                // Test için varsayılan ID
                 userId = '7846843720';
                 document.getElementById('user-name-display').textContent = 'Demo';
                 document.getElementById('user-avatar').textContent = 'D';
@@ -551,7 +544,6 @@
     }
 
     async function loadPlaylist() {
-        // Telegram varsa tekrar userId almayı dene
         if (!userId && tg && tg.initDataUnsafe?.user?.id) {
             userId = tg.initDataUnsafe.user.id;
         }
@@ -563,7 +555,15 @@
         grid.innerHTML = '<div class="empty-state"><h3>Yükleniyor...</h3></div>';
         try {
             const res = await fetch(`https://merhabaml-production.up.railway.app/api/playlists?user_id=${userId}`);
-            const songs = await res.json();
+            const result = await res.json();
+            const songs = result.songs || result;
+            const username = result.username;
+
+            if (username && username !== 'Kullanıcı') {
+                document.getElementById('user-name-display').textContent = username;
+                document.getElementById('user-avatar').textContent = username.charAt(0).toUpperCase();
+            }
+
             document.getElementById('stat-total').textContent = songs.length;
             let total = 0;
             const artists = new Set();
@@ -602,10 +602,8 @@
     }
 
     async function sendFromBot(file_id, title) {
-        if (!userId) {
-            if (tg && tg.initDataUnsafe?.user?.id) {
-                userId = tg.initDataUnsafe.user.id;
-            }
+        if (!userId && tg && tg.initDataUnsafe?.user?.id) {
+            userId = tg.initDataUnsafe.user.id;
         }
         if (!userId) {
             showNotification('Kullanıcı bulunamadı.', true);
