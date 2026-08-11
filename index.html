@@ -6,13 +6,6 @@
     <title>Lre | Müzik Kütüphanesi</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Stiller aynı, değişiklik yok. Önceki stil bloğunun aynısı */
-        *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-        :root{--bg:#fafafa;--text:#1a1a1a;--text-light:#666;--muted:#999;--accent:#00d4aa;--accent-dark:#00b894;--card:#fff;--border:#e8e8e8;--shadow:0 4px 24px rgba(0,0,0,0.06);--shadow-lg:0 20px 60px rgba(0,0,0,0.12);--grad:linear-gradient(135deg,#00d4aa,#00a8e8,#0077b6)}
-        html{scroll-behavior:smooth}
-        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-        /* ... (önceki tüm stil kodları aynen kalacak, uzatmamak için buraya yazmıyorum, kodda mevcut) ... */
-        /* Stillerin tamamı öncekiyle aynı olduğu için eksik olmaması adına tüm CSS'i ekliyorum */
         *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
         :root{--bg:#fafafa;--text:#1a1a1a;--text-light:#666;--muted:#999;--accent:#00d4aa;--accent-dark:#00b894;--card:#fff;--border:#e8e8e8;--shadow:0 4px 24px rgba(0,0,0,0.06);--shadow-lg:0 20px 60px rgba(0,0,0,0.12);--grad:linear-gradient(135deg,#00d4aa,#00a8e8,#0077b6)}
         html{scroll-behavior:smooth}
@@ -195,35 +188,25 @@
         .bottom-nav-item svg { width: 24px; height: 24px; stroke-width: 2; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         .animate-in { animation: fadeInUp 0.6s ease-out; }
-        @media (max-width: 1024px) { .stats-row { grid-template-columns: repeat(2, 1fr); } .features, .global-section, .faq-section { grid-template-columns: 1fr; } .news-grid { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .nav { padding: 16px 20px; } .nav-links { display: none; } .nav-mobile { display: block; } .hero { padding: 100px 20px 60px; } .section, .global-section, .faq-section { padding: 60px 20px; } .partners-grid { gap: 24px; } .news-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; gap: 16px; text-align: center; } .mobile-header { display: flex; } .main { padding: 80px 20px 100px; margin-left: 0; } .header h1 { font-size: 1.4rem; } .stats-row { grid-template-columns: 1fr; } .stat-value { font-size: 2.2rem; } .section-header { flex-direction: column; align-items: flex-start; } .files-grid { grid-template-columns: 1fr; } .bottom-nav { display: flex; } .sidebar { transform: translateX(-100%); padding-top: 80px; } .sidebar.active { transform: translateX(0); } }
-        /* Uyarı popup stili */
-        .access-denied-overlay {
-            position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 9999;
-            display: flex; align-items: center; justify-content: center; flex-direction: column;
-            color: #fff; font-family: 'Inter', sans-serif; text-align: center; padding: 20px;
-        }
-        .access-denied-card {
-            background: var(--card); color: var(--text); border-radius: 24px;
-            padding: 40px 30px; max-width: 400px; box-shadow: var(--shadow-lg);
-        }
+        .access-denied-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #fff; font-family: 'Inter', sans-serif; text-align: center; padding: 20px; }
+        .access-denied-card { background: var(--card); color: var(--text); border-radius: 24px; padding: 40px 30px; max-width: 400px; box-shadow: var(--shadow-lg); }
         .access-denied-card h2 { margin-bottom: 12px; font-size: 1.6rem; }
         .access-denied-card p { margin-bottom: 24px; color: var(--text-light); }
         .access-denied-card .btn-primary { display: inline-flex; text-decoration: none; }
+        @media (max-width: 1024px) { .stats-row { grid-template-columns: repeat(2, 1fr); } .features, .global-section, .faq-section { grid-template-columns: 1fr; } .news-grid { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .nav { padding: 16px 20px; } .nav-links { display: none; } .nav-mobile { display: block; } .hero { padding: 100px 20px 60px; } .section, .global-section, .faq-section { padding: 60px 20px; } .partners-grid { gap: 24px; } .news-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; gap: 16px; text-align: center; } .mobile-header { display: flex; } .main { padding: 80px 20px 100px; margin-left: 0; } .header h1 { font-size: 1.4rem; } .stats-row { grid-template-columns: 1fr; } .stat-value { font-size: 2.2rem; } .section-header { flex-direction: column; align-items: flex-start; } .files-grid { grid-template-columns: 1fr; } .bottom-nav { display: flex; } .sidebar { transform: translateX(-100%); padding-top: 80px; } .sidebar.active { transform: translateX(0); } }
     </style>
 </head>
 <body>
 
-<!-- UYARI: Sadece WebApp için -->
 <div id="access-denied" class="access-denied-overlay" style="display: none;">
     <div class="access-denied-card">
-        <h2>🚫 Erişim Kısıtlandı</h2>
+        <h2>Erişim Kısıtlandı</h2>
         <p>Bu siteye yalnızca <strong>Telegram botu üzerinden</strong> erişilebilir.</p>
         <a href="https://t.me/LreBot" target="_blank" class="btn-primary">Bota Git</a>
     </div>
 </div>
 
-<!-- LANDING PAGE (sadece WebApp içinde gösterilecek) -->
 <div id="landing-page">
     <nav class="nav" id="main-nav">
         <a href="#" class="nav-logo">
@@ -240,7 +223,6 @@
         <button class="nav-cta" onclick="openApp()">Kütüphaneye Git</button>
         <button class="nav-mobile" onclick="toggleMobile()" aria-label="Menu"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </nav>
-
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-orb" style="left:10%;top:30%"></div>
@@ -254,19 +236,14 @@
         </div>
         <div class="hero-scroll"><span>Keşfet</span><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg></div>
     </section>
-
     <section class="partners">
         <div class="partners-label">Desteklenen Müzik Formatları</div>
         <div class="partners-grid">
             <span class="partner-logo">MP3</span><span class="partner-logo">M4A</span><span class="partner-logo">WEBM</span><span class="partner-logo">OPUS</span><span class="partner-logo">FLAC</span><span class="partner-logo">WAV</span><span class="partner-logo">AAC</span>
         </div>
     </section>
-
     <section class="section" id="features">
-        <div class="section-header">
-            <div class="section-label">Neden Lre?</div>
-            <h2 class="section-title">Müzik Deneyiminizi <strong>Geliştirin</strong></h2>
-        </div>
+        <div class="section-header"><div class="section-label">Neden Lre?</div><h2 class="section-title">Müzik Deneyiminizi <strong>Geliştirin</strong></h2></div>
         <div class="features">
             <div class="feature-visual"><div class="feature-orb"></div><div class="feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="36" height="36"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg></div></div>
             <div class="feature-list">
@@ -277,7 +254,6 @@
             </div>
         </div>
     </section>
-
     <section class="global-section" id="global">
         <div class="global-left"><div class="global-logo">L</div><h2 class="global-title">Kesintisiz <strong>Müzik Keyfi</strong></h2></div>
         <div class="global-right">
@@ -287,7 +263,6 @@
             <div class="global-feature"><div class="global-feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div><div><h4>Popüler İçerikler</h4><p>En çok dinlenen parçaları keşfedin</p></div></div>
         </div>
     </section>
-
     <section class="section" id="news">
         <div class="news-header"><div><div class="section-label">Güncellemeler</div><h2 class="section-title" style="margin:0">Son <strong>Haberler</strong></h2></div><a href="#" class="btn-secondary" style="padding:12px 28px;font-size:.85rem">Tümünü Gör</a></div>
         <div class="news-grid">
@@ -297,7 +272,6 @@
             <div class="news-card"><div class="news-image" style="background:linear-gradient(135deg,#4facfe,#00f2fe)"><span class="news-tag">İyileştirme</span><svg width="60" height="60" fill="none" stroke="white" viewBox="0 0 24 24" opacity="0.3"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></div><div class="news-content"><div class="news-date">27 Ocak 2025</div><div class="news-title">Mobil cihazlar için tam uyumlu arayüz</div></div></div>
         </div>
     </section>
-
     <section class="faq-section" id="faq">
         <div class="faq-left"><div class="section-label">Yardım</div><h2 class="section-title" style="margin-bottom:20px">Sıkça Sorulan<br>Sorular</h2><p>Hâlâ sorularınız mı var? Ekibimizle iletişime geçin.</p><a href="https://t.me/IegaIize" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none;">İletişime Geç</a></div>
         <div class="faq-right">
@@ -306,7 +280,6 @@
             <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Verilerim güvende mi?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><p>Evet, tüm verileriniz 256-bit SSL şifreleme ile korunmaktadır.</p></div></div>
         </div>
     </section>
-
     <section class="cta-section" id="contact">
         <div class="cta-bg"></div>
         <div class="cta-content">
@@ -319,64 +292,35 @@
             </div>
         </div>
     </section>
-
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-brand"><h3>Lre</h3><p>Müzik koleksiyonunuzu güvenle saklayın, dilediğiniz an erişin.</p></div>
             <div class="footer-column"><h4>Ürünler</h4><a href="#">Müzik Yönetimi</a><a href="#">API Erişimi</a><a href="#">Kurumsal</a></div>
             <div class="footer-column"><h4>Kaynaklar</h4><a href="#">Şeffaflık</a><a href="#">Haberler</a><a href="#">Gizlilik</a></div>
             <div class="footer-column"><h4>Hakkımızda</h4><a href="#">Şirket</a><a href="#">Ortaklar</a><a href="https://t.me/IegaIize" target="_blank">İletişim</a></div>
-            <div class="footer-column">
-                <div class="social-label">Sosyal Medya</div>
-                <div class="social-links">
-                    <a href="https://t.me/IegaIize" target="_blank" class="social-link"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.1-.2-.11-.06-.26-.04-.37-.02-.16.03-2.64 1.68-2.64 1.68l-1.76-1.19c-.36-.24-.65-.41-.18-.41z"/></svg></a>
-                </div>
-            </div>
+            <div class="footer-column"><div class="social-label">Sosyal Medya</div><div class="social-links"><a href="https://t.me/IegaIize" target="_blank" class="social-link"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.1-.2-.11-.06-.26-.04-.37-.02-.16.03-2.64 1.68-2.64 1.68l-1.76-1.19c-.36-.24-.65-.41-.18-.41z"/></svg></a></div></div>
         </div>
         <div class="footer-bottom"><a href="#">Yasal Uyarı</a><span style="color:var(--muted);font-size:.9rem">© 2025 Lre. Tüm hakları saklıdır.</span></div>
     </footer>
 </div>
 
-<!-- APP -->
 <div class="app" id="app">
     <div class="mobile-header">
-        <div class="logo-small">
-            <svg viewBox="0 0 28 28" fill="none" width="36" height="36"><rect x="2" y="2" width="24" height="24" rx="6" fill="#00d4aa" opacity="0.15"/><path d="M8 14h12M14 8v12" stroke="#00d4aa" stroke-width="2.5" stroke-linecap="round"/><circle cx="14" cy="14" r="5" stroke="#00d4aa" stroke-width="2"/></svg>
-            Lre
-        </div>
+        <div class="logo-small"><svg viewBox="0 0 28 28" fill="none" width="36" height="36"><rect x="2" y="2" width="24" height="24" rx="6" fill="#00d4aa" opacity="0.15"/><path d="M8 14h12M14 8v12" stroke="#00d4aa" stroke-width="2.5" stroke-linecap="round"/><circle cx="14" cy="14" r="5" stroke="#00d4aa" stroke-width="2"/></svg>Lre</div>
         <button class="hamburger-btn" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
     </div>
     <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
     <aside class="sidebar" id="sidebar">
         <div class="logo"><svg viewBox="0 0 28 28" fill="none" width="28" height="28"><rect x="2" y="2" width="24" height="24" rx="6" fill="#00d4aa" opacity="0.15"/><path d="M8 14h12M14 8v12" stroke="#00d4aa" stroke-width="2.5" stroke-linecap="round"/><circle cx="14" cy="14" r="5" stroke="#00d4aa" stroke-width="2"/></svg></div>
-        <button class="nav-item active" onclick="showPage('home')">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-            Ana Sayfa
-        </button>
-        <button class="nav-item" onclick="showPage('playlist')">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
-            Çalma Listem
-            <span class="badge badge-cyan" id="nav-song-count">0</span>
-        </button>
-        <button class="nav-item" onclick="showPage('contact')">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            İletişim
-        </button>
+        <button class="nav-item active" onclick="showPage('home')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Ana Sayfa</button>
+        <button class="nav-item" onclick="showPage('playlist')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>Çalma Listem<span class="badge badge-cyan" id="nav-song-count">0</span></button>
+        <button class="nav-item" onclick="showPage('contact')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>İletişim</button>
         <div class="nav-footer">
-            <button class="user-mini">
-                <div class="user-avatar" id="user-avatar">?</div>
-                <div class="user-info">
-                    <div class="user-name" id="user-name-display">...</div>
-                    <div class="user-role" id="user-role">Kullanıcı</div>
-                </div>
-            </button>
+            <button class="user-mini"><div class="user-avatar" id="user-avatar">?</div><div class="user-info"><div class="user-name" id="user-name-display">...</div><div class="user-role" id="user-role">Kullanıcı</div></div></button>
         </div>
     </aside>
     <main class="main">
-        <div id="page-home" class="animate-in">
-            <div class="header"><h1>Hoş Geldiniz</h1><p>Müzik kütüphanenize göz atın</p></div>
-            <div class="empty-state"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg><h3>Çalma listenizi görüntülemek için menüden "Çalma Listem" seçeneğine tıklayın.</h3></div>
-        </div>
+        <div id="page-home" class="animate-in"><div class="header"><h1>Hoş Geldiniz</h1><p>Müzik kütüphanenize göz atın</p></div><div class="empty-state"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg><h3>Çalma listenizi görüntülemek için menüden "Çalma Listem" seçeneğine tıklayın.</h3></div></div>
         <div id="page-playlist" class="hidden animate-in">
             <div class="header"><h1>Çalma Listem</h1><p>İndirdiğiniz tüm şarkılar</p></div>
             <div class="stats-row">
@@ -387,10 +331,7 @@
             <div class="section-header"><h2>Şarkılar</h2><button class="btn-secondary" onclick="loadPlaylist()" style="padding:12px 24px;font-size:.9rem">Yenile</button></div>
             <div class="files-grid" id="songs-grid"></div>
         </div>
-        <div id="page-contact" class="hidden animate-in">
-            <div class="header"><h1>İletişim</h1><p>Bize ulaşın</p></div>
-            <div class="stat-card" style="max-width:500px;margin:0 auto;"><div style="padding:10px 0"><h3 style="font-size:1.3rem;font-weight:700;margin-bottom:12px">Geliştirici İletişim</h3><p style="color:var(--text-light);margin-bottom:20px">Bot geliştiricisi ile doğrudan iletişime geçmek için aşağıdaki bağlantıyı kullanabilirsiniz.</p><a href="https://t.me/IegaIize" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none;">Telegram: @legalize</a></div></div>
-        </div>
+        <div id="page-contact" class="hidden animate-in"><div class="header"><h1>İletişim</h1><p>Bize ulaşın</p></div><div class="stat-card" style="max-width:500px;margin:0 auto;"><div style="padding:10px 0"><h3 style="font-size:1.3rem;font-weight:700;margin-bottom:12px">Geliştirici İletişim</h3><p style="color:var(--text-light);margin-bottom:20px">Bot geliştiricisi ile doğrudan iletişime geçmek için aşağıdaki bağlantıyı kullanabilirsiniz.</p><a href="https://t.me/IegaIize" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none;">Telegram: @legalize</a></div></div></div>
     </main>
     <nav class="bottom-nav">
         <button class="bottom-nav-item active" onclick="showPage('home')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Ana Sayfa</button>
@@ -404,25 +345,18 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
     (function() {
-        // Telegram WebApp kontrolü
         if (!window.Telegram || !window.Telegram.WebApp || !window.Telegram.WebApp.initData || !window.Telegram.WebApp.initDataUnsafe || !window.Telegram.WebApp.initDataUnsafe.user) {
-            // Tarayıcıdan giriş: Erişim engeli göster
             document.getElementById('access-denied').style.display = 'flex';
             document.getElementById('landing-page').style.display = 'none';
-            return; // Kodun devamını durdur
+            return;
         }
-
-        // WebApp aktif, normal akış
         window.tg = window.Telegram.WebApp;
         window.userId = window.tg.initDataUnsafe.user.id;
         window.tg.ready();
-
         const firstName = window.tg.initDataUnsafe.user.first_name || 'Kullanıcı';
         document.getElementById('user-name-display').textContent = firstName;
         document.getElementById('user-avatar').textContent = firstName.charAt(0).toUpperCase();
         document.getElementById('user-role').textContent = 'Kullanıcı';
-
-        // Diğer tüm fonksiyonlar burada tanımlanacak
         window.openApp = function() {
             document.getElementById('landing-page').style.display = 'none';
             document.getElementById('app').classList.add('active');
@@ -440,7 +374,6 @@
         window.showPage = function(page) {
             document.querySelectorAll('[id^="page-"]').forEach(p => p.classList.add('hidden'));
             document.getElementById('page-' + page).classList.remove('hidden');
-
             document.querySelectorAll('.nav-item, .bottom-nav-item').forEach(n => n.classList.remove('active'));
             if (page === 'home') {
                 document.querySelector('.nav-item[onclick*="home"]').classList.add('active');
@@ -459,7 +392,7 @@
             const grid = document.getElementById('songs-grid');
             grid.innerHTML = '<div class="empty-state"><h3>Yükleniyor...</h3></div>';
             try {
-                const res = await fetch(`https://merhabaml-production.up.railway.app/api/playlists?user_id=${window.userId}`);
+                const res = await fetch(`https://worker-production-840f.up.railway.app/api/playlists?user_id=${window.userId}`);
                 const result = await res.json();
                 const songs = result.songs || result;
                 const username = result.username;
@@ -483,17 +416,11 @@
                     const sec = String(s.duration % 60).padStart(2, '0');
                     const thumbUrl = `https://img.youtube.com/vi/${s.video_id}/mqdefault.jpg`;
                     return `<div class="file-card" style="animation: fadeInUp 0.5s ${i*0.05}s both">
-                        <div class="file-cover">
-                            <img src="${thumbUrl}" alt="" style="width:100%;height:100%;object-fit:cover;"
-                                 onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\"file-icon-fallback\">🎵</span>'">
-                        </div>
+                        <div class="file-cover"><img src="${thumbUrl}" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\"file-icon-fallback\">🎵</span>'"></div>
                         <div class="file-info">
                             <div class="file-name">${escapeHtml(s.title)}</div>
                             <div class="file-duration">${escapeHtml(s.uploader)} · ${m}:${sec}</div>
-                            <div class="file-meta">
-                                <span class="file-type yt">YouTube</span>
-                                <button class="send-btn" onclick="sendFromBot('${s.file_id}','${escapeHtml(s.title)}')">Bottan Gönder</button>
-                            </div>
+                            <div class="file-meta"><span class="file-type yt">YouTube</span><button class="send-btn" onclick="sendFromBot('${s.file_id}','${escapeHtml(s.title)}')">Bottan Gönder</button></div>
                         </div>
                     </div>`;
                 }).join('');
@@ -504,22 +431,13 @@
         };
         window.sendFromBot = async function(file_id, title) {
             try {
-                const res = await fetch(`https://merhabaml-production.up.railway.app/api/send_song?user_id=${window.userId}&file_id=${file_id}`);
+                const res = await fetch(`https://worker-production-840f.up.railway.app/api/send_song?user_id=${window.userId}&file_id=${file_id}`);
                 const data = await res.json();
-                if (data.success) {
-                    showNotification(`"${title}" bot üzerinden gönderildi!`);
-                } else {
-                    showNotification('Gönderme başarısız.', true);
-                }
-            } catch(e) {
-                showNotification('Bağlantı hatası.', true);
-            }
+                if (data.success) { showNotification(`"${title}" bot üzerinden gönderildi!`); }
+                else { showNotification('Gönderme başarısız.', true); }
+            } catch(e) { showNotification('Bağlantı hatası.', true); }
         };
-        window.escapeHtml = function(text) {
-            const d = document.createElement('div');
-            d.textContent = text;
-            return d.innerHTML;
-        };
+        window.escapeHtml = function(text) { const d = document.createElement('div'); d.textContent = text; return d.innerHTML; };
         window.showNotification = function(msg, isError = false) {
             const n = document.getElementById('notification');
             n.textContent = msg;
@@ -528,14 +446,10 @@
         };
         window.toggleFaq = function(btn) { btn.closest('.faq-item').classList.toggle('open'); };
         window.toggleMobile = function(){};
-
-        // Scroll olayı
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('main-nav');
             if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
         });
-
-        // Sayfa yükleme
         showPage('home');
     })();
 </script>
