@@ -132,9 +132,7 @@
         .mobile-header {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 64px;
             background: rgba(255,255,255,0.95);
             backdrop-filter: blur(20px);
@@ -231,12 +229,8 @@
             background: linear-gradient(135deg, #b8e0d2, #c8b8e0);
             display: flex; align-items: center; justify-content: center;
         }
-        .file-cover img {
-            width: 100%; height: 100%; object-fit: cover;
-        }
-        .file-icon-fallback {
-            font-size: 3rem;
-        }
+        .file-cover img { width: 100%; height: 100%; object-fit: cover; }
+        .file-icon-fallback { font-size: 3rem; }
         .file-info { padding: 24px; }
         .file-name { font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 10px; word-break: break-all; }
         .file-duration { font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px; }
@@ -323,12 +317,12 @@
         </a>
         <div class="nav-links" id="nav-links">
             <a href="#features" class="nav-link active">Ana Sayfa</a>
-            <a href="#global" class="nav-link">Ozellikler</a>
-            <a href="#news" class="nav-link">Guncellemeler</a>
+            <a href="#global" class="nav-link">Özellikler</a>
+            <a href="#news" class="nav-link">Güncellemeler</a>
             <a href="#faq" class="nav-link">SSS</a>
-            <a href="#contact" class="nav-link">Iletisim</a>
+            <a href="#contact" class="nav-link">İletişim</a>
         </div>
-        <button class="nav-cta" onclick="openApp()">Kutuphaneye Git</button>
+        <button class="nav-cta" onclick="openApp()">Kütüphaneye Git</button>
         <button class="nav-mobile" onclick="toggleMobile()" aria-label="Menu"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </nav>
 
@@ -336,18 +330,18 @@
         <div class="hero-bg"></div>
         <div class="hero-orb" style="left:10%;top:30%"></div>
         <div class="hero-orb"></div>
-        <div class="hero-badge"><span class="dot"></span>Guvenli ve Hizli Muzik Erisimi</div>
-        <h1 class="hero-title">Muzik <span>Koleksiyonun</span>, Her Yerde <span>Yaninda</span></h1>
-        <p class="hero-subtitle">Telegram botunuzla indirdiginiz tum sarkilari goruntuleyin, bottan tekrar gonderin. Sik, hizli ve guvenli.</p>
+        <div class="hero-badge"><span class="dot"></span>Güvenli ve Hızlı Müzik Erişimi</div>
+        <h1 class="hero-title">Müzik <span>Koleksiyonun</span>, Her Yerde <span>Yanında</span></h1>
+        <p class="hero-subtitle">Telegram botunuzla indirdiğiniz tüm şarkıları görüntüleyin, bottan tekrar gönderin. Şık, hızlı ve güvenli.</p>
         <div class="hero-cta">
-            <button class="btn-primary" onclick="openApp()">Kutuphaneye Git <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></button>
-            <a href="#features" class="btn-secondary">Detaylari Incele</a>
+            <button class="btn-primary" onclick="openApp()">Kütüphaneye Git <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></button>
+            <a href="#features" class="btn-secondary">Detayları İncele</a>
         </div>
-        <div class="hero-scroll"><span>Kesfet</span><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg></div>
+        <div class="hero-scroll"><span>Keşfet</span><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg></div>
     </section>
 
     <section class="partners">
-        <div class="partners-label">Desteklenen Muzik Formatlari</div>
+        <div class="partners-label">Desteklenen Müzik Formatları</div>
         <div class="partners-grid">
             <span class="partner-logo">MP3</span><span class="partner-logo">M4A</span><span class="partner-logo">WEBM</span><span class="partner-logo">OPUS</span><span class="partner-logo">FLAC</span><span class="partner-logo">WAV</span><span class="partner-logo">AAC</span>
         </div>
@@ -356,67 +350,67 @@
     <section class="section" id="features">
         <div class="section-header">
             <div class="section-label">Neden Lre?</div>
-            <h2 class="section-title">Muzik Deneyiminizi <strong>Gelistirin</strong></h2>
+            <h2 class="section-title">Müzik Deneyiminizi <strong>Geliştirin</strong></h2>
         </div>
         <div class="features">
             <div class="feature-visual"><div class="feature-orb"></div><div class="feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="36" height="36"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg></div></div>
             <div class="feature-list">
-                <div class="feature-item"><h3>Aninda Erisim</h3><p>Bot ile indirdiginiz sarkilar aninda kutuphanenizde listelenir.</p></div>
-                <div class="feature-item"><h3>Guvenli Depolama</h3><p>Verileriniz yalnizca size ozel olarak sifrelenmis bicimde saklanir.</p></div>
-                <div class="feature-item"><h3>Her Yerden Ulasim</h3><p>Web tarayicinizla dunyanin her yerinden muziginize ulasin.</p></div>
-                <div class="audit-badges"><div class="audit-badge"><div class="audit-badge-label">Hiz</div><div class="audit-badge-name">Anlik Yukleme</div></div><div class="audit-badge"><div class="audit-badge-label">Guvenlik</div><div class="audit-badge-name">256-bit SSL</div></div></div>
+                <div class="feature-item"><h3>Anında Erişim</h3><p>Bot ile indirdiğiniz şarkılar anında kütüphanenizde listelenir.</p></div>
+                <div class="feature-item"><h3>Güvenli Depolama</h3><p>Verileriniz yalnızca size özel olarak şifrelenmiş biçimde saklanır.</p></div>
+                <div class="feature-item"><h3>Her Yerden Ulaşım</h3><p>Web tarayıcınızla dünyanın her yerinden müziğinize ulaşın.</p></div>
+                <div class="audit-badges"><div class="audit-badge"><div class="audit-badge-label">Hız</div><div class="audit-badge-name">Anlık Yükleme</div></div><div class="audit-badge"><div class="audit-badge-label">Güvenlik</div><div class="audit-badge-name">256-bit SSL</div></div></div>
             </div>
         </div>
     </section>
 
     <section class="global-section" id="global">
-        <div class="global-left"><div class="global-logo">L</div><h2 class="global-title">Kesintisiz <strong>Muzik Keyfi</strong></h2></div>
+        <div class="global-left"><div class="global-logo">L</div><h2 class="global-title">Kesintisiz <strong>Müzik Keyfi</strong></h2></div>
         <div class="global-right">
-            <div class="global-feature"><div class="global-feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div><div><h4>Dunya Capinda Erisim</h4><p>Nerede olursaniz olun kutuphanenize ulasin</p></div><span class="badge">7/24</span></div>
-            <div class="global-feature"><div class="global-feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><h4>Aninda Indirme</h4><p>Yuksek hizli sunucular ile aninda erisim</p></div></div>
-            <div class="global-feature"><div class="global-feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><div><h4>Topluluk Destegi</h4><p>Aktif toplulugumuz ile her zaman yardima haziriz</p></div></div>
-            <div class="global-feature"><div class="global-feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div><div><h4>Populer Icerikler</h4><p>En cok dinlenen parcalari kesfedin</p></div></div>
+            <div class="global-feature"><div class="global-feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div><div><h4>Dünya Çapında Erişim</h4><p>Nerede olursanız olun kütüphanenize ulaşın</p></div><span class="badge">7/24</span></div>
+            <div class="global-feature"><div class="global-feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><h4>Anında İndirme</h4><p>Yüksek hızlı sunucular ile anında erişim</p></div></div>
+            <div class="global-feature"><div class="global-feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><div><h4>Topluluk Desteği</h4><p>Aktif topluluğumuz ile her zaman yardıma hazırız</p></div></div>
+            <div class="global-feature"><div class="global-feature-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div><div><h4>Popüler İçerikler</h4><p>En çok dinlenen parçaları keşfedin</p></div></div>
         </div>
     </section>
 
     <section class="section" id="news">
-        <div class="news-header"><div><div class="section-label">Guncellemeler</div><h2 class="section-title" style="margin:0">Son <strong>Haberler</strong></h2></div><a href="#" class="btn-secondary" style="padding:12px 28px;font-size:.85rem">Tumunu Gor</a></div>
+        <div class="news-header"><div><div class="section-label">Güncellemeler</div><h2 class="section-title" style="margin:0">Son <strong>Haberler</strong></h2></div><a href="#" class="btn-secondary" style="padding:12px 28px;font-size:.85rem">Tümünü Gör</a></div>
         <div class="news-grid">
-            <div class="news-card"><div class="news-image"><span class="news-tag">Guncelleme</span><svg width="60" height="60" fill="none" stroke="white" viewBox="0 0 24 24" opacity="0.3"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg></div><div class="news-content"><div class="news-date">7 Mart 2025</div><div class="news-title">Yeni muzik yonetim arayuzu yayinlandi</div></div></div>
-            <div class="news-card"><div class="news-image" style="background:linear-gradient(135deg,#667eea,#764ba2)"><span class="news-tag">Ozellik</span><svg width="60" height="60" fill="none" stroke="white" viewBox="0 0 24 24" opacity="0.3"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><div class="news-content"><div class="news-date">4 Mart 2025</div><div class="news-title">Gelismis arama ve filtreleme eklendi</div></div></div>
-            <div class="news-card"><div class="news-image" style="background:linear-gradient(135deg,#f093fb,#f5576c)"><span class="news-tag">Guvenlik</span><svg width="60" height="60" fill="none" stroke="white" viewBox="0 0 24 24" opacity="0.3"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><div class="news-content"><div class="news-date">13 Subat 2025</div><div class="news-title">256-bit sifreleme ile guvenlik artirildi</div></div></div>
-            <div class="news-card"><div class="news-image" style="background:linear-gradient(135deg,#4facfe,#00f2fe)"><span class="news-tag">Iyilestirme</span><svg width="60" height="60" fill="none" stroke="white" viewBox="0 0 24 24" opacity="0.3"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></div><div class="news-content"><div class="news-date">27 Ocak 2025</div><div class="news-title">Mobil cihazlar icin tam uyumlu arayuz</div></div></div>
+            <div class="news-card"><div class="news-image"><span class="news-tag">Güncelleme</span><svg width="60" height="60" fill="none" stroke="white" viewBox="0 0 24 24" opacity="0.3"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg></div><div class="news-content"><div class="news-date">7 Mart 2025</div><div class="news-title">Yeni müzik yönetim arayüzü yayınlandı</div></div></div>
+            <div class="news-card"><div class="news-image" style="background:linear-gradient(135deg,#667eea,#764ba2)"><span class="news-tag">Özellik</span><svg width="60" height="60" fill="none" stroke="white" viewBox="0 0 24 24" opacity="0.3"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><div class="news-content"><div class="news-date">4 Mart 2025</div><div class="news-title">Gelişmiş arama ve filtreleme eklendi</div></div></div>
+            <div class="news-card"><div class="news-image" style="background:linear-gradient(135deg,#f093fb,#f5576c)"><span class="news-tag">Güvenlik</span><svg width="60" height="60" fill="none" stroke="white" viewBox="0 0 24 24" opacity="0.3"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><div class="news-content"><div class="news-date">13 Şubat 2025</div><div class="news-title">256-bit şifreleme ile güvenlik artırıldı</div></div></div>
+            <div class="news-card"><div class="news-image" style="background:linear-gradient(135deg,#4facfe,#00f2fe)"><span class="news-tag">İyileştirme</span><svg width="60" height="60" fill="none" stroke="white" viewBox="0 0 24 24" opacity="0.3"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></div><div class="news-content"><div class="news-date">27 Ocak 2025</div><div class="news-title">Mobil cihazlar için tam uyumlu arayüz</div></div></div>
         </div>
     </section>
 
     <section class="faq-section" id="faq">
-        <div class="faq-left"><div class="section-label">Yardim</div><h2 class="section-title" style="margin-bottom:20px">Sikca Sorulan<br>Sorular</h2><p>Hala sorulariniz mi var? Ekibimizle iletisime gecin.</p><a href="https://t.me/IegaIize" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none;">Iletisime Gec</a></div>
+        <div class="faq-left"><div class="section-label">Yardım</div><h2 class="section-title" style="margin-bottom:20px">Sıkça Sorulan<br>Sorular</h2><p>Hâlâ sorularınız mı var? Ekibimizle iletişime geçin.</p><a href="https://t.me/IegaIize" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none;">İletişime Geç</a></div>
         <div class="faq-right">
-            <div class="faq-item open"><button class="faq-question" onclick="toggleFaq(this)">Calma listemi nasil gorurum?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><p>Telegram botumuzla sarki indirdiginizde otomatik olarak listenize eklenir. Buradan goruntuleyebilirsiniz.</p></div></div>
-            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Hangi formatlar destekleniyor?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><p>MP3, M4A, WEBM, OPUS, FLAC, WAV, AAC ve daha fazlasi.</p></div></div>
-            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Verilerim guvende mi?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><p>Evet, tum verileriniz 256-bit SSL sifreleme ile korunmaktadir.</p></div></div>
+            <div class="faq-item open"><button class="faq-question" onclick="toggleFaq(this)">Çalma listemi nasıl görürüm?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><p>Telegram botumuzla şarkı indirdiğinizde otomatik olarak listenize eklenir. Buradan görüntüleyebilirsiniz.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Hangi formatlar destekleniyor?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><p>MP3, M4A, WEBM, OPUS, FLAC, WAV, AAC ve daha fazlası.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Verilerim güvende mi?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><p>Evet, tüm verileriniz 256-bit SSL şifreleme ile korunmaktadır.</p></div></div>
         </div>
     </section>
 
     <section class="cta-section" id="contact">
         <div class="cta-bg"></div>
         <div class="cta-content">
-            <h2 class="cta-title">Hemen <strong>Baslayin</strong></h2>
-            <p class="cta-subtitle">Muzik koleksiyonunuzu guvenle yonetin, her an her yerde erisin.</p>
-            <button class="btn-white" onclick="openApp()">Kutuphaneye Git</button>
+            <h2 class="cta-title">Hemen <strong>Başlayın</strong></h2>
+            <p class="cta-subtitle">Müzik koleksiyonunuzu güvenle yönetin, her an her yerde erişin.</p>
+            <button class="btn-white" onclick="openApp()">Kütüphaneye Git</button>
             <div style="margin-top:20px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
-                <a href="https://t.me/IegaIize" target="_blank" style="color:rgba(255,255,255,0.9);text-decoration:none;font-size:.95rem;">Iletisim</a>
-                <a href="https://t.me/freepythoncode" target="_blank" style="color:rgba(255,255,255,0.9);text-decoration:none;font-size:.95rem;">Python Kanali</a>
+                <a href="https://t.me/IegaIize" target="_blank" style="color:rgba(255,255,255,0.9);text-decoration:none;font-size:.95rem;">İletişim</a>
+                <a href="https://t.me/freepythoncode" target="_blank" style="color:rgba(255,255,255,0.9);text-decoration:none;font-size:.95rem;">Python Kanalı</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-grid">
-            <div class="footer-brand"><h3>Lre</h3><p>Muzik koleksiyonunuzu guvenle saklayin, dilediginiz an erisin. Yeni nesil muzik yonetim platformu.</p></div>
-            <div class="footer-column"><h4>Urunler</h4><a href="#">Muzik Yonetimi</a><a href="#">API Erisimi</a><a href="#">Kurumsal</a></div>
-            <div class="footer-column"><h4>Kaynaklar</h4><a href="#">Seffaflik</a><a href="#">Haberler</a><a href="#">Gizlilik</a></div>
-            <div class="footer-column"><h4>Hakkimizda</h4><a href="#">Sirket</a><a href="#">Ortaklar</a><a href="https://t.me/IegaIize" target="_blank">Iletisim</a></div>
+            <div class="footer-brand"><h3>Lre</h3><p>Müzik koleksiyonunuzu güvenle saklayın, dilediğiniz an erişin. Yeni nesil müzik yönetim platformu.</p></div>
+            <div class="footer-column"><h4>Ürünler</h4><a href="#">Müzik Yönetimi</a><a href="#">API Erişimi</a><a href="#">Kurumsal</a></div>
+            <div class="footer-column"><h4>Kaynaklar</h4><a href="#">Şeffaflık</a><a href="#">Haberler</a><a href="#">Gizlilik</a></div>
+            <div class="footer-column"><h4>Hakkımızda</h4><a href="#">Şirket</a><a href="#">Ortaklar</a><a href="https://t.me/IegaIize" target="_blank">İletişim</a></div>
             <div class="footer-column">
                 <div class="social-label">Sosyal Medya</div>
                 <div class="social-links">
@@ -424,7 +418,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom"><a href="#">Yasal Uyari</a><span style="color:var(--muted);font-size:.9rem">© 2025 Lre. Tum haklari saklidir.</span></div>
+        <div class="footer-bottom"><a href="#">Yasal Uyarı</a><span style="color:var(--muted);font-size:.9rem">© 2025 Lre. Tüm hakları saklıdır.</span></div>
     </footer>
 </div>
 
@@ -446,47 +440,47 @@
         </button>
         <button class="nav-item" onclick="showPage('playlist')">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
-            Calma Listem
+            Çalma Listem
             <span class="badge badge-cyan" id="nav-song-count">0</span>
         </button>
         <button class="nav-item" onclick="showPage('contact')">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            Iletisim
+            İletişim
         </button>
         <div class="nav-footer">
             <button class="user-mini" onclick="logout()">
                 <div class="user-avatar" id="user-avatar">M</div>
                 <div class="user-info">
-                    <div class="user-name" id="user-name-display">Misafir</div>
-                    <div class="user-role" id="user-role">Kullanici</div>
+                    <div class="user-name" id="user-name-display">Giriş Yapın</div>
+                    <div class="user-role" id="user-role">Kullanıcı</div>
                 </div>
             </button>
         </div>
     </aside>
     <main class="main">
         <div id="page-home" class="animate-in">
-            <div class="header"><h1>Hos Geldiniz</h1><p>Muzik kutuphanenize goz atin</p></div>
-            <div class="empty-state"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg><h3>Calma listenizi goruntulemek icin menuden "Calma Listem" secenegine tiklayin.</h3></div>
+            <div class="header"><h1>Hoş Geldiniz</h1><p>Müzik kütüphanenize göz atın</p></div>
+            <div class="empty-state"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg><h3>Çalma listenizi görüntülemek için menüden "Çalma Listem" seçeneğine tıklayın.</h3></div>
         </div>
         <div id="page-playlist" class="hidden animate-in">
-            <div class="header"><h1>Calma Listem</h1><p>Indirdiginiz tum sarkilar</p></div>
+            <div class="header"><h1>Çalma Listem</h1><p>İndirdiğiniz tüm şarkılar</p></div>
             <div class="stats-row">
                 <div class="stat-card"><div class="stat-header"><div class="stat-icon cyan"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg></div><span class="stat-label">Toplam</span></div><div class="stat-value" id="stat-total">0</div></div>
-                <div class="stat-card"><div class="stat-header"><div class="stat-icon peach"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><span class="stat-label">Toplam Sure</span></div><div class="stat-value" id="stat-duration">0dk</div></div>
-                <div class="stat-card"><div class="stat-header"><div class="stat-icon purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><span class="stat-label">Sanatcilar</span></div><div class="stat-value" id="stat-artists">0</div></div>
+                <div class="stat-card"><div class="stat-header"><div class="stat-icon peach"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><span class="stat-label">Toplam Süre</span></div><div class="stat-value" id="stat-duration">0dk</div></div>
+                <div class="stat-card"><div class="stat-header"><div class="stat-icon purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><span class="stat-label">Sanatçılar</span></div><div class="stat-value" id="stat-artists">0</div></div>
             </div>
-            <div class="section-header"><h2>Sarkilar</h2><button class="btn-secondary" onclick="loadPlaylist()" style="padding:12px 24px;font-size:.9rem">Yenile</button></div>
+            <div class="section-header"><h2>Şarkılar</h2><button class="btn-secondary" onclick="loadPlaylist()" style="padding:12px 24px;font-size:.9rem">Yenile</button></div>
             <div class="files-grid" id="songs-grid"></div>
         </div>
         <div id="page-contact" class="hidden animate-in">
-            <div class="header"><h1>Iletisim</h1><p>Bize ulasin</p></div>
-            <div class="stat-card" style="max-width:500px;margin:0 auto;"><div style="padding:10px 0"><h3 style="font-size:1.3rem;font-weight:700;margin-bottom:12px">Gelistirici Iletisim</h3><p style="color:var(--text-light);margin-bottom:20px">Bot gelistiricisi ile dogrudan iletisime gecmek icin asagidaki baglantiyi kullanabilirsiniz.</p><a href="https://t.me/IegaIize" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none;">Telegram: @legalize</a></div></div>
+            <div class="header"><h1>İletişim</h1><p>Bize ulaşın</p></div>
+            <div class="stat-card" style="max-width:500px;margin:0 auto;"><div style="padding:10px 0"><h3 style="font-size:1.3rem;font-weight:700;margin-bottom:12px">Geliştirici İletişim</h3><p style="color:var(--text-light);margin-bottom:20px">Bot geliştiricisi ile doğrudan iletişime geçmek için aşağıdaki bağlantıyı kullanabilirsiniz.</p><a href="https://t.me/IegaIize" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none;">Telegram: @legalize</a></div></div>
         </div>
     </main>
     <nav class="bottom-nav">
         <button class="bottom-nav-item active" onclick="showPage('home')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Ana Sayfa</button>
         <button class="bottom-nav-item" onclick="showPage('playlist')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>Liste</button>
-        <button class="bottom-nav-item" onclick="showPage('contact')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Iletisim</button>
+        <button class="bottom-nav-item" onclick="showPage('contact')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>İletişim</button>
     </nav>
 </div>
 
@@ -499,13 +493,17 @@
     document.addEventListener('DOMContentLoaded', () => {
         if (tg && tg.initDataUnsafe?.user?.id) {
             userId = tg.initDataUnsafe.user.id;
-            document.getElementById('user-name-display').textContent = tg.initDataUnsafe.user.first_name || 'Kullanici';
-            document.getElementById('user-avatar').textContent = (tg.initDataUnsafe.user.first_name || 'K')[0].toUpperCase();
+            const firstName = tg.initDataUnsafe.user.first_name || 'Kullanıcı';
+            document.getElementById('user-name-display').textContent = firstName;
+            document.getElementById('user-avatar').textContent = firstName.charAt(0).toUpperCase();
+            document.getElementById('user-role').textContent = 'Kullanıcı';
         } else {
             const params = new URLSearchParams(window.location.search);
-            userId = params.get('user_id') || '7846843720';
-            document.getElementById('user-name-display').textContent = 'Test Kullanici';
-            document.getElementById('user-avatar').textContent = 'T';
+            userId = params.get('user_id');
+            if (!userId) {
+                document.getElementById('user-name-display').textContent = 'Giriş Yapın';
+                document.getElementById('user-avatar').textContent = '?';
+            }
         }
 
         window.addEventListener('scroll', () => {
@@ -553,11 +551,11 @@
 
     async function loadPlaylist() {
         if (!userId) {
-            showNotification('Kullanici bulunamadi.', true);
+            showNotification('Kullanıcı bulunamadı.', true);
             return;
         }
         const grid = document.getElementById('songs-grid');
-        grid.innerHTML = '<div class="empty-state"><h3>Yukleniyor...</h3></div>';
+        grid.innerHTML = '<div class="empty-state"><h3>Yükleniyor...</h3></div>';
         try {
             const res = await fetch(`https://merhabaml-production.up.railway.app/api/playlists?user_id=${userId}`);
             const songs = await res.json();
@@ -570,7 +568,7 @@
             document.getElementById('nav-song-count').textContent = songs.length;
 
             if (!songs.length) {
-                grid.innerHTML = '<div class="empty-state"><h3>Henuz sarki yok.</h3></div>';
+                grid.innerHTML = '<div class="empty-state"><h3>Henüz şarkı yok.</h3></div>';
                 return;
             }
             grid.innerHTML = songs.map((s, i) => {
@@ -587,32 +585,32 @@
                         <div class="file-duration">${escapeHtml(s.uploader)} · ${m}:${sec}</div>
                         <div class="file-meta">
                             <span class="file-type yt">YouTube</span>
-                            <button class="send-btn" onclick="sendFromBot('${s.file_id}','${escapeHtml(s.title)}')">Bottan Gonder</button>
+                            <button class="send-btn" onclick="sendFromBot('${s.file_id}','${escapeHtml(s.title)}')">Bottan Gönder</button>
                         </div>
                     </div>
                 </div>`;
             }).join('');
         } catch(e) {
-            grid.innerHTML = '<div class="empty-state"><h3>Veri alinamadi.</h3></div>';
-            showNotification('Baglanti hatasi', true);
+            grid.innerHTML = '<div class="empty-state"><h3>Veri alınamadı.</h3></div>';
+            showNotification('Bağlantı hatası', true);
         }
     }
 
     async function sendFromBot(file_id, title) {
         if (!userId) {
-            showNotification('Kullanici bulunamadi.', true);
+            showNotification('Kullanıcı bulunamadı.', true);
             return;
         }
         try {
             const res = await fetch(`https://merhabaml-production.up.railway.app/api/send_song?user_id=${userId}&file_id=${file_id}`);
             const data = await res.json();
             if (data.success) {
-                showNotification(`"${title}" bot uzerinden gonderildi!`);
+                showNotification(`"${title}" bot üzerinden gönderildi!`);
             } else {
-                showNotification('Gonderme basarisiz.', true);
+                showNotification('Gönderme başarısız.', true);
             }
         } catch(e) {
-            showNotification('Baglanti hatasi.', true);
+            showNotification('Bağlantı hatası.', true);
         }
     }
 
