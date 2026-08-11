@@ -443,7 +443,7 @@
             <button class="user-mini">
                 <div class="user-avatar" id="user-avatar">?</div>
                 <div class="user-info">
-                    <div class="user-name" id="user-name-display">Giriş Yapın</div>
+                    <div class="user-name" id="user-name-display">Bot Üzerinden Açın</div>
                     <div class="user-role" id="user-role">Kullanıcı</div>
                 </div>
             </button>
@@ -493,10 +493,8 @@
             const params = new URLSearchParams(window.location.search);
             userId = params.get('user_id');
             if (!userId) {
-                userId = '7846843720';
-                document.getElementById('user-name-display').textContent = 'Demo';
-                document.getElementById('user-avatar').textContent = 'D';
-                document.getElementById('user-role').textContent = 'Test';
+                document.getElementById('user-name-display').textContent = 'Bot Üzerinden Açın';
+                document.getElementById('user-avatar').textContent = '!';
             }
         }
 
